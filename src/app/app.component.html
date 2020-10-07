@@ -1,3 +1,29 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+	<ion-menu side="start" menuId="first" contentId="content1">
+		<ion-header>
+			<ion-toolbar>
+				<ion-title>Navigate</ion-title>
+			</ion-toolbar>
+		</ion-header>
+		<ion-content>
+			<ion-menu-toggle auto-hide="false" *ngFor="let pages of appPages">
+                <ion-item detail="false" lines="none" [routerDirection]="forward" [routerLink]="[pages.url]">
+            		<ion-icon slot="start" [name]="pages.icon" class="sidemenu-icon"></ion-icon>
+            			<ion-label>
+              				{{pages.title}}
+             			</ion-label>
+          		</ion-item>
+        	</ion-menu-toggle>
+			<div class="line"></div>
+			<ion-menu-toggle auto-hide="false" *ngFor="let pages of appPages2">
+                <ion-item detail="false" lines="none" [routerDirection]="forward" [routerLink]="[pages.url]">
+            		<ion-icon slot="start" [name]="pages.icon" class="sidemenu-icon"></ion-icon>
+            			<ion-label>
+              				{{pages.title}}
+             			</ion-label>
+          		</ion-item>
+        	</ion-menu-toggle>
+		</ion-content>
+	</ion-menu>
+	<ion-router-outlet id="content1"></ion-router-outlet>
 </ion-app>

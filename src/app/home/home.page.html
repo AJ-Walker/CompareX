@@ -1,35 +1,36 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      CompareX
-    </ion-title>
-  </ion-toolbar>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+		<ion-title>CompareX</ion-title>
+		<ion-buttons slot="end">
+		<ion-button size="small" fill="clear">
+			<ion-icon name="cart-sharp" slot="icon-only" no-margin class="top-btn"></ion-icon>
+		</ion-button>
+	    </ion-buttons>
+	</ion-toolbar>
 </ion-header>
-
-<ion-content class="auth-form">
-<ion-card>
-  <ion-card-header>
-  	<ion-avatar>
-  <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-</ion-avatar>
-    <ion-card-title>CompareX</ion-card-title>
-  </ion-card-header>
-
-  <ion-card-content>
-    Price Comparison App for checking price of different product from popular websites.
-  </ion-card-content>
+<ion-content>
+    <ion-searchbar placeholder="Type to Search.." animated></ion-searchbar>
+    <ion-card>
+  		<ion-card-content>
+  			<ion-grid>
+    		<ion-row>
+			    <ion-col>
+			      category1
+			    </ion-col>
+			    <ion-col>
+			      category2
+			    </ion-col>
+			    <ion-col>
+			      category3
+			    </ion-col>
+			    <ion-col>
+			      category4
+			    </ion-col>
+			  </ion-row>
+			</ion-grid>
+  		</ion-card-content>
 </ion-card>
-  <ion-grid>
-    <ion-row>
-      <ion-col align-self-center>
-        <ion-button [routerLink]="['/sign-up']" expand="block" color="primary">Register</ion-button>
-
-        <span class="divider line one-line">or</span>
-
-        <span class="already">Already a user?</span>
-
-        <ion-button [routerLink]="['/login']" expand="block" color="danger">Login</ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
 </ion-content>

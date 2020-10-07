@@ -27,6 +27,26 @@ const routes: Routes = [
     path: 'settings',
     loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
   },
+  {
+    path: 'search',
+    loadChildren: () => import('./search/search.module').then( m => m.SearchPageModule)
+  },
+  {
+    path: 'shopping-cart',
+    loadChildren: () => import('./shopping-cart/shopping-cart.module').then( m => m.ShoppingCartPageModule)
+  },
+  {
+    path: 'qr-code',
+    loadChildren: () => import('./qr-code/qr-code.module').then( m => m.QRCodePageModule)
+  },
+  {
+    path: 'faqs',
+    loadChildren: () => import('./faqs/faqs.module').then( m => m.FaqsPageModule)
+  },
+  {
+    path: 'contact-us',
+    loadChildren: () => import('./contact-us/contact-us.module').then( m => m.ContactUsPageModule)
+  },
 ];
 
 @NgModule({

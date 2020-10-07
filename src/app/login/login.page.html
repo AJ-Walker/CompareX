@@ -1,29 +1,55 @@
-<ion-header>
+
+<ion-header color="primary" class="mybg head">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Log In</ion-title>
+    <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <form>
-    <ion-item lines="full">
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" required></ion-input>
-    </ion-item>
-
-    <ion-item lines="full">
-      <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" required></ion-input>
-    </ion-item>
-
+  <ion-text><h3 class="title">Login</h3></ion-text>
+  <ion-grid>
     <ion-row>
       <ion-col>
-        <ion-button type="submit" color="danger" expand="block">Login</ion-button>
-        <a [routerLink]="['/forget-password']" class="small-text">Forgot Password?</a>
+        <ion-input clearInput type="email" placeholder="Email" [(ngModel)]="email" class="input"></ion-input>
       </ion-col>
     </ion-row>
-  </form>
+    <ion-row>
+      <ion-col>
+        <ion-input clearInput type="password" placeholder="Password" [(ngModel)]="password" class="input"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text color="primary" (click)="fun.navigate('passwordreset', true)"><h6 class="small">Forgot Password?</h6>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" (click)="signin()" color="primary"><strong class="white">Login</strong></ion-button>
+      </ion-col>
+    </ion-row>
+    <div class="line"></div>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" fill="outline" color="fb"><ion-img src="assets/images/facebook_logo.png" slot="start" class="logo"></ion-img>Facebook</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="block" fill="outline" color="success"><ion-img src="assets/images/google_logo.png" slot="start" class="logo"></ion-img>Google</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" fill="outline" color="primary" (click)="fun.navigate('signup')"><strong>New? Create an Account</strong></ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text color="medium"><h6 class="small"><a (click)="open_modal(true)">Terms of Use</a> and <a (click)="open_modal(false)">Privacy Policy</a></h6></ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
