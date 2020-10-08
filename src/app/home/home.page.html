@@ -6,7 +6,7 @@
 		<ion-title>CompareX</ion-title>
 		<ion-buttons slot="end">
 		<ion-button size="small" fill="clear">
-			<ion-icon name="cart-sharp" slot="icon-only" no-margin class="top-btn"></ion-icon>
+			<ion-icon name="heart" slot="icon-only" no-margin class="top-btn"></ion-icon>
 		</ion-button>
 	    </ion-buttons>
 	</ion-toolbar>
@@ -15,130 +15,51 @@
     <ion-searchbar placeholder="Type to Search.." animated></ion-searchbar>
     <ion-card>
   		<ion-card-content>
+  			<div class="title"><h6>Categories..</h6></div>
   			<ion-grid>
     		<ion-row>
-			    <ion-col>
-			    	<ion-avatar>
-					  <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-					</ion-avatar>
-			      category1
-			    </ion-col>
-			    <ion-col>
-			    	<ion-avatar>
-					  <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-					</ion-avatar>
-			      category2
-			    </ion-col>
-			    <ion-col>
-			    	<ion-avatar>
-					  <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-					</ion-avatar>
-			      category3
-			    </ion-col>
-			    <ion-col>
-			    	<ion-avatar>
-					  <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-					</ion-avatar>
-			      category4
+			    <ion-col *ngFor="let c of category_row1">
+			    	<ion-avatar  class="image-center">
+              		<ion-img [src]="c.icon_img"></ion-img>
+            		</ion-avatar>
+			      <ion-text color="primary"><h6  class="text">{{c.title}}</h6></ion-text>
 			    </ion-col>
 			  </ion-row>
 			  <ion-row>
-			    <ion-col>
-					<ion-avatar>
-					  <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-					</ion-avatar>
-			      category5
-			    </ion-col>
-			    <ion-col>
-			    	<ion-avatar>
-					  <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-					</ion-avatar>
-			      category6
-			    </ion-col>
-			    <ion-col>
-			    	<ion-avatar>
-					  <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-					</ion-avatar>
-			      category7
-			    </ion-col>
-			    <ion-col>
-			    	<ion-avatar>
-					  <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-					</ion-avatar>
-			      category8
-			    </ion-col>
-			  </ion-row>
-			  <ion-row>
-			    <ion-col size="3">
-			    	<ion-avatar>
-					  <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-					</ion-avatar>
-			      category9
-			    </ion-col>
-			    <ion-col size="3">
-			    	<ion-avatar>
-					  <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-					</ion-avatar>
-			      category10
+			    <ion-col *ngFor="let c of category_row2">
+			    	<ion-avatar class="image-center">
+              		<ion-img [src]="c.icon_img"></ion-img>
+            		</ion-avatar>
+			      <ion-text color="primary"><h6  class="text">{{c.title}}</h6></ion-text>
 			    </ion-col>
 			  </ion-row>
 			</ion-grid>
   		</ion-card-content>
 	</ion-card>
-	<div class="title"><h6>Recommended</h6></div>
-	<ion-grid>
-		<ion-row>
-			<ion-col>
-				<ion-card>
-					<ion-card-content>
-						<h1>p1</h1>
-					</ion-card-content>
-				</ion-card>
-			</ion-col>
-			<ion-col>
-				<ion-card>
-					<ion-card-content>
-						<h1>p2</h1>
-					</ion-card-content>
-				</ion-card>
-			</ion-col>
+	<div class="title"><h6>Recommended Products..</h6></div>
+      <ion-row>
+		  <ion-col *ngFor="let data of recommended_products_data;" size="6">
+		    <ion-card class="card" no-margin (click)="open(data)">
+		      <ion-img [src]="data.product_img"></ion-img>
+		      <ion-card-content>
+		        <ion-card-title>
+		          <ion-row>
+		            <ion-col no-padding>
+		              <ion-text text-left><span><strong>{{data.product_name}}</strong></span></ion-text><br>
+		              <ion-text text-left>{{data.product_description}}</ion-text>
+		            </ion-col>
+		        	</ion-row>
+		        	<ion-row>
+		            <ion-col no-padding>
+		              <ion-text text-left><span class="price"><strong>{{data.product_price}}</strong></span></ion-text>
+		            </ion-col>
+		          </ion-row>
+		          <ion-row>
+		            <ion-button expand="block" fill="outline" color="primary"><ion-icon [name]="data.website_icon" slot="start" class="logo"></ion-icon>{{data.buy_button}}</ion-button>
+		          </ion-row>
+		        </ion-card-title>
+		      </ion-card-content>
+		    </ion-card>
+		  </ion-col>
 		</ion-row>
-		<ion-row>
-			<ion-col>
-				<ion-card>
-					<ion-card-content>
-						<h1>p1</h1>
-					</ion-card-content>
-				</ion-card>
-			</ion-col>
-			<ion-col>
-				<ion-card>
-					<ion-card-content>
-						<h1>p2</h1>
-					</ion-card-content>
-				</ion-card>
-			</ion-col>
-		</ion-row>
-	</ion-grid>
-	<ion-slides>
-        <ion-slide>
-          	<ion-card>
-			  <ion-card-header>
-			    <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-			    <ion-card-title>Card Title</ion-card-title>
-			  </ion-card-header>
-
-			  <ion-card-content>
-			    Keep close to Nature's heart... and break clear away, once in awhile,
-			    and climb a mountain or spend a week in the woods. Wash your spirit clean.
-			  </ion-card-content>
-			</ion-card>
-        </ion-slide>
-        <ion-slide>
-          <h1>Slide 2</h1>
-        </ion-slide>
-        <ion-slide>
-          <h1>Slide 3</h1>
-        </ion-slide>
-      </ion-slides>
 </ion-content>

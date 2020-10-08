@@ -41,9 +41,9 @@ export class AppComponent {
       icon : "search"
     },
     {
-      title : "Cart",
-      url : "/shopping-cart",
-      icon : "cart-sharp"
+      title : "Wishlist",
+      url : "/wishlist",
+      icon : "heart"
     },
     {
       title : "Scan QR code",

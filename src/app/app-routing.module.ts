@@ -32,10 +32,6 @@ const routes: Routes = [
     loadChildren: () => import('./search/search.module').then( m => m.SearchPageModule)
   },
   {
-    path: 'shopping-cart',
-    loadChildren: () => import('./shopping-cart/shopping-cart.module').then( m => m.ShoppingCartPageModule)
-  },
-  {
     path: 'qr-code',
     loadChildren: () => import('./qr-code/qr-code.module').then( m => m.QRCodePageModule)
   },

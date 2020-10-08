@@ -7,9 +7,26 @@
     text-align: center;
 }
 
-.horizontal-cards {
-	ion-card {
-		display: inline-block;
-		width: 50%;
-	}
+.text {
+	text-align: center;
+	margin: 5px 0 5px 0;
+}
+
+.logo {
+    width: 1.25em !important;
+}
+
+.card {
+    box-shadow: unset;
+    border-radius: 9px;
+    background-color: black;
+}
+.price {
+    font-size: 18px;
+    float: left;
+    margin: 3px;
+}
+
+.image-center{
+	margin:0 auto;
 }
