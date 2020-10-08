@@ -1,9 +1,27 @@
 <ion-app>
 	<ion-menu side="start" menuId="first" contentId="content1">
 		<ion-header>
-			<ion-toolbar>
-				<ion-title>Navigate</ion-title>
-			</ion-toolbar>
+			<ion-toolbar color="primary" >
+          <ion-row padding-horizontal align-items-center>
+            <ion-col size="3" padding-vertical align-items-center>
+              <ion-avatar margin-vertical>
+                <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+              </ion-avatar>
+            </ion-col>
+            <ion-col padding-vertical align-items-center>
+              <div margin-vertical>
+                <h4 no-margin margin-start class="medium white"><strong>Enter to your account</strong></h4>
+              </div>
+             </ion-col>
+             <ion-col>
+                <ion-segment class="segSection">
+                  <ion-segment-button class="my-btn" no-margin no-padding>
+                    <ion-text padding-horizontal class="text">Log in to your account</ion-text>
+                  </ion-segment-button>
+                </ion-segment>
+            </ion-col>
+          </ion-row>
+        </ion-toolbar>
 		</ion-header>
 		<ion-content>
 			<ion-menu-toggle auto-hide="false" *ngFor="let pages of appPages">

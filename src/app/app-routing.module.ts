@@ -47,6 +47,34 @@ const routes: Routes = [
     path: 'contact-us',
     loadChildren: () => import('./contact-us/contact-us.module').then( m => m.ContactUsPageModule)
   },
+  {
+    path: 'account-settings',
+    loadChildren: () => import('./account-settings/account-settings.module').then( m => m.AccountSettingsPageModule)
+  },
+  {
+    path: 'change-email-add',
+    loadChildren: () => import('./change-email-add/change-email-add.module').then( m => m.ChangeEmailAddPageModule)
+  },
+  {
+    path: 'email-settings',
+    loadChildren: () => import('./email-settings/email-settings.module').then( m => m.EmailSettingsPageModule)
+  },
+  {
+    path: 'notification',
+    loadChildren: () => import('./notification/notification.module').then( m => m.NotificationPageModule)
+  },
+  {
+    path: 'notification-settings',
+    loadChildren: () => import('./notification-settings/notification-settings.module').then( m => m.NotificationSettingsPageModule)
+  },
+  {
+    path: 'change-password',
+    loadChildren: () => import('./change-password/change-password.module').then( m => m.ChangePasswordPageModule)
+  },
+  {
+    path: 'wishlist',
+    loadChildren: () => import('./wishlist/wishlist.module').then( m => m.WishlistPageModule)
+  },
 ];
 
 @NgModule({

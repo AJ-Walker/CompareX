@@ -1,3 +1,15 @@
 .top-btn {
   padding: 9px;
 }
+
+.title {
+    font-size: 18px;
+    text-align: center;
+}
+
+.horizontal-cards {
+	ion-card {
+		display: inline-block;
+		width: 50%;
+	}
+}

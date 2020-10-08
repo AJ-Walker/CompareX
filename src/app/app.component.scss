@@ -1,0 +1,19 @@
+
+.segSection{
+    min-height:20px;
+}
+
+.my-btn{
+    border: unset !important;
+    border-radius: 5px !important;
+    color: rgb(250, 250, 250);
+    margin: 0 12px !important;
+    width: 50%;
+    --background-checked: transparent;
+    min-height: 20px;
+}
+
+.text {
+    font-size: 12px;
+    padding-bottom: 5px;
+}

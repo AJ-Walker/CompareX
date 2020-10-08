@@ -41,7 +41,7 @@ export class AppComponent {
       icon : "search"
     },
     {
-      title : "Shopping Cart",
+      title : "Cart",
       url : "/shopping-cart",
       icon : "cart-sharp"
     },

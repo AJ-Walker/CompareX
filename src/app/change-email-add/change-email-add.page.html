@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Change Email Address</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item color="light" lines="none">
+    <ion-col padding-vertical>
+      <ion-row>
+        <h4 class="small" no-margin><strong>Use this form to change your Email Address.</strong></h4>
+      </ion-row>
+
+    </ion-col>
+  </ion-item><div class="sep"></div>
+  <ion-item lines="none">
+    <ion-col padding-vertical>
+      <ion-row>
+        <h4 class="small" no-margin>New e-mail address</h4>
+      </ion-row>
+      <ion-row>
+        <ion-input class="input" placeholder="Enter e-mail address" type="email" padding-horizontal></ion-input>
+      </ion-row>
+    </ion-col>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-col padding-vertical>
+      <ion-row>
+        <h4 class="small" no-margin>Confirm e-mail address</h4>
+      </ion-row>
+      <ion-row>
+        <ion-input class="input" placeholder="Confirm new e-mail address" type="email" padding-horizontal></ion-input>
+      </ion-row>
+    </ion-col>
+  </ion-item>
+</ion-content>
+<ion-footer no-border padding>
+  <ion-button expand="block" color="primary" (click)="fun.back()"><span class="white"><strong>Save Changes</strong></span></ion-button>
+</ion-footer>

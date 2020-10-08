@@ -1,9 +1,17 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>settings</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Settings</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-button routerLink="/notification-settings" expand="full" fill="solid" size="default">Notifications Settings</ion-button>
+  <ion-button routerLink="/email-settings" expand="full" fill="solid" size="default">Email Settings</ion-button>
+  <ion-button routerLink="/account-settings" expand="full" fill="solid" size="default">Account Settings</ion-button>
+  <ion-button routerLink="/login" expand="full" fill="solid" size="default">Logout</ion-button>
+
 
 </ion-content>

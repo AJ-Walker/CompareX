@@ -1,9 +1,39 @@
-<ion-header>
+<ion-header color="primary" class="mybg head">
   <ion-toolbar>
-    <ion-title>contact-us</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Contact Us</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-text><h3 class="title">Contact Us</h3></ion-text>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-input clearInput placeholder="Name" [(ngModel)]="name" class="input"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input clearInput type="email" placeholder="Email" [(ngModel)]="email" class="input"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input clearInput type="text" placeholder="Subject" [(ngModel)]="subject" class="input"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input clearInput type="text" placeholder="Messege" [(ngModel)]="messege" class="input"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" (click)="send_message()" color="primary"><strong class="white">Send Messege</strong></ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

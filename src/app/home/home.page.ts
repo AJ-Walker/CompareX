@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+	//variable with any datatype
 
-  constructor() {}
+  constructor() {
+  	//calling the functin declared in below
+  }
 
 }
