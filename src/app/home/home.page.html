@@ -1,21 +1,26 @@
 <ion-header>
 	<ion-toolbar color="primary">
 		<ion-buttons slot="start">
-			<ion-menu-button></ion-menu-button>
+			<ion-menu-button menu="first"></ion-menu-button>
 		</ion-buttons>
 		<ion-title>CompareX</ion-title>
 		<ion-buttons slot="end">
-		<ion-button size="small" fill="clear">
+		<ion-button size="small" fill="clear" routerLink="/wishlist">
 			<ion-icon name="heart" slot="icon-only" no-margin class="top-btn"></ion-icon>
 		</ion-button>
 	    </ion-buttons>
+	    <ion-buttons slot="end">
+			<ion-menu-button menu="second">
+				<ion-icon name="filter"></ion-icon>
+			</ion-menu-button>
+		</ion-buttons>
 	</ion-toolbar>
 </ion-header>
 <ion-content>
     <ion-searchbar placeholder="Type to Search.." animated></ion-searchbar>
     <ion-card>
   		<ion-card-content>
-  			<div class="title"><h6>Categories..</h6></div>
+  			<div class="title"><h6>Browse by Categories..</h6></div>
   			<ion-grid>
     		<ion-row>
 			    <ion-col *ngFor="let c of category_row1">
@@ -25,6 +30,7 @@
 			      <ion-text color="primary"><h6  class="text">{{c.title}}</h6></ion-text>
 			    </ion-col>
 			  </ion-row>
+
 			  <ion-row>
 			    <ion-col *ngFor="let c of category_row2">
 			    	<ion-avatar class="image-center">

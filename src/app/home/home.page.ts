@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class HomePage {
 	category_row1 :any ;
 	category_row2 :any ;
-	recommended_products_data :any;//variable with any datatype
+	recommended_products_data :any;;//variable with any datatype
 
   constructor() {
   	this.category();

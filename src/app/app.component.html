@@ -1,31 +1,26 @@
 <ion-app>
-	<ion-menu side="start" menuId="first" contentId="content1">
+  <ion-split-pane contentId="main">
+	<ion-menu type="overlay" contentId="main" menuId="first">
 		<ion-header>
-			<ion-toolbar color="primary" >
-          <ion-row padding-horizontal align-items-center>
-            <ion-col size="3" padding-vertical align-items-center>
+        <ion-toolbar color="primary">
+          <ion-row padding-horizontal align-items-center class="rw-width">
+            <ion-col size="3" padding-vertical align-items-center class="cl-lay">
               <ion-avatar>
-              <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-            </ion-avatar>
+                <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" alt="Profile image">
+              </ion-avatar>
             </ion-col>
-            <ion-col padding-vertical align-items-center>
+            <ion-col padding-vertical align-items-center class="cl-lay">
               <div margin-vertical>
                 <h4 no-margin margin-start class="medium white"><strong>Enter to your account</strong></h4>
+                <h6 no-margin margin-start class="small white">Log in to your account</h6>
               </div>
-             </ion-col>
-             <ion-col>
-                <ion-segment class="segSection">
-                  <ion-segment-button class="my-btn" no-margin no-padding>
-                    <ion-text padding-horizontal class="text">Log in to your account</ion-text>
-                  </ion-segment-button>
-                </ion-segment>
             </ion-col>
           </ion-row>
         </ion-toolbar>
 		</ion-header>
 		<ion-content>
 			<ion-menu-toggle auto-hide="false" *ngFor="let pages of appPages">
-                <ion-item detail="false" lines="none" [routerDirection]="forward" [routerLink]="[pages.url]">
+              <ion-item detail="false" lines="none" [routerDirection]="forward" [routerLink]="[pages.url]">
             		<ion-icon slot="start" [name]="pages.icon" class="sidemenu-icon"></ion-icon>
             			<ion-label>
               				{{pages.title}}
@@ -43,5 +38,30 @@
         	</ion-menu-toggle>
 		</ion-content>
 	</ion-menu>
-	<ion-router-outlet id="content1"></ion-router-outlet>
+	<ion-router-outlet id="main"></ion-router-outlet>
+  <ion-menu side="end" type="overlay" contentId="main" menuId="second" #side>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title color="dark">Filters</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <<ion-content>
+            <!--Filters options here-->
+      </ion-content>
+      <ion-footer no-border>
+        <ion-row>
+          <ion-col size="6">
+            <ion-button color="primary" expand="block">
+              <h4>Clear all</h4>
+            </ion-button>
+          </ion-col>
+          <ion-col size="6">
+            <ion-button color="primary" expand="block">
+              <h4>Apply</h4>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-footer>
+    </ion-menu>
+</ion-split-pane>
 </ion-app>
