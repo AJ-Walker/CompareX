@@ -58,10 +58,10 @@ export class HomePage {
 	recommended_products() {
 		this.recommended_products_data =[
 		{
-			product_img : "https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y",
-			product_name : "Product1",
+			product_img : 'https://images-na.ssl-images-amazon.com/images/I/81frwlzRG5L._SY741_.jpg',
+			product_name : "Samsung Galaxy Note 20 Ultra 5G (Mystic Black, 12GB RAM, 256GB Storage)",
 			product_description : "Some text about the product1",
-			product_price : "$199.99",
+			product_price : "₹ 1,04,999.00",
 			website_icon : "home",
 			buy_button : "Buy",
 
@@ -95,3 +95,5 @@ export class HomePage {
 		]
 	}
 }
+
+

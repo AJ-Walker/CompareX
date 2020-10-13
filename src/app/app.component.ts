@@ -41,12 +41,17 @@ export class AppComponent {
       icon : "search"
     },
     {
+      title : "Notification",
+      url : "/notification",
+      icon : "notifications"
+    },
+    {
       title : "Wishlist",
       url : "/wishlist",
       icon : "heart"
     },
     {
-      title : "Scan QR code",
+      title : "Scanner",
       url : "/qr-code",
       icon : "qr-code"
     },

@@ -23,13 +23,13 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-text color="primary" (click)="fun.navigate('passwordreset', true)"><h6 class="small">Forgot Password?</h6>
+        <ion-text color="primary" text-end><h6 class="small">Forgot Password?</h6>
         </ion-text>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-button expand="block" (click)="signin()" color="primary"><strong class="white">Login</strong></ion-button>
+        <ion-button expand="block" color="primary" (click)="login()"><strong class="white">Login</strong></ion-button>
       </ion-col>
     </ion-row>
     <div class="line"></div>
@@ -43,12 +43,12 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-button expand="block" fill="outline" color="primary" (click)="fun.navigate('signup')"><strong>New? Create an Account</strong></ion-button>
+        <ion-button expand="block" fill="outline" color="primary" routerLink="/sign-up"><strong>New? Create an Account</strong></ion-button>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-text color="medium"><h6 class="small"><a (click)="open_modal(true)">Terms of Use</a> and <a (click)="open_modal(false)">Privacy Policy</a></h6></ion-text>
+        <ion-text color="medium"><h6 class="small"><a>Terms of Use</a> and <a>Privacy Policy</a></h6></ion-text>
       </ion-col>
     </ion-row>
   </ion-grid>

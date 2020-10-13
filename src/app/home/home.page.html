@@ -5,11 +5,8 @@
 		</ion-buttons>
 		<ion-title>CompareX</ion-title>
 		<ion-buttons slot="end">
-<<<<<<< HEAD
-		<ion-button size="small" fill="clear" routerLink="/wishlist">
-=======
+		<ion-button size="small" fill="clear" routerLink="/wishlist"></ion-button>
 		<ion-button routerLink="/wishlist" size="small" fill="clear">
->>>>>>> 7a0217ea3f4dac709c7bf2401e4079316b53127e
 			<ion-icon name="heart" slot="icon-only" no-margin class="top-btn"></ion-icon>
 		</ion-button>
 	    </ion-buttons>
@@ -20,8 +17,13 @@
 		</ion-buttons>
 	</ion-toolbar>
 </ion-header>
-<ion-content>
-    <ion-searchbar placeholder="Type to Search.." animated></ion-searchbar>
+<ion-content color="light">
+	<ion-card>
+		<ion-card-content class="search-bar-card">
+   		<ion-input type="text" routerLink="/search" placeholder="I'm searching for..." class="search-bar">
+   		</ion-input>
+   		</ion-card-content>
+	</ion-card>
     <ion-card>
   		<ion-card-content>
   			<div class="title"><h6>Browse by Categories..</h6></div>
@@ -29,16 +31,15 @@
     		<ion-row>
 			    <ion-col *ngFor="let c of category_row1">
 			    	<ion-avatar  class="image-center">
-              		<ion-img [src]="c.icon_img"></ion-img>
+              		<ion-img [src]="c.icon_img" alt="Categories image"></ion-img>
             		</ion-avatar>
 			      <ion-text color="primary"><h6  class="text">{{c.title}}</h6></ion-text>
 			    </ion-col>
 			  </ion-row>
-
 			  <ion-row>
 			    <ion-col *ngFor="let c of category_row2">
 			    	<ion-avatar class="image-center">
-              		<ion-img [src]="c.icon_img"></ion-img>
+              		<ion-img [src]="c.icon_img" alt="Categories image"></ion-img>
             		</ion-avatar>
 			      <ion-text color="primary"><h6  class="text">{{c.title}}</h6></ion-text>
 			    </ion-col>
@@ -50,7 +51,9 @@
       <ion-row>
 		  <ion-col *ngFor="let data of recommended_products_data;" size="6">
 		    <ion-card class="card" no-margin (click)="open(data)">
-		      <ion-img [src]="data.product_img"></ion-img>
+		    <ion-card-header>
+		    	<ion-img [src]="data.product_img" style="height: 250px" alt="Product image"></ion-img>
+		    </ion-card-header>
 		      <ion-card-content>
 		        <ion-card-title>
 		          <ion-row>
